@@ -33,14 +33,14 @@ public class NC15 {
             int len = queue.size();
             ret.add(new ArrayList<>());
             for (int i = 0; i < len; i++) {
-                TreeNode first = queue.pop();
-                ret.get(ret.size() - 1).add(first.val);
-                System.out.println(first.val);
-                if (first.left != null) {
-                    queue.add(first.left);
+                TreeNode top = queue.pop();
+                ret.get(ret.size() - 1).add(top.val);
+                System.out.println(top.val);
+                if (top.left != null) {
+                    queue.add(top.left);
                 }
-                if (first.right != null) {
-                    queue.add(first.right);
+                if (top.right != null) {
+                    queue.add(top.right);
                 }
             }
 
